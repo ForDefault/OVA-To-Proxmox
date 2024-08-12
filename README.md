@@ -5,8 +5,7 @@
 Quick method to transfer an ova quickly and generate a VM in a, mostly, automated way.
 
 
--- I wanted to make this fully automated but could not figure out how to entirely do that. 
-
+Note: This process is not fully automated, but these steps will guide you through it as seamlessly as possible.
 
 # #1  Copy and run the following command in the Proxmox CLI (web browser is easy) to simplify selecting the Mounted Storage Path you want to use:
 
