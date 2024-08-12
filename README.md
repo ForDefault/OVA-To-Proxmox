@@ -13,6 +13,20 @@ df -h | grep -Ev '^Filesystem|tmpfs|udev|/run|/sys|/dev/shm|/dev/loop|/boot/efi|
 
 ```
 # #1  Copy this command into Proxmox cli and select the Mounted Storage Path you want to use
+```
+PUTHERE=$(whoami) && \
+REPO_URL="https://github.com/ForDefault/OVA-To-Proxmox.git" && \
+REPO_NAME=$(basename $REPO_URL .git) && \
+DEST_DIR="/home/$PUTHERE/$REPO_NAME" && \
+if [ -d "$DEST_DIR" ]; then \
+  rm -rf "$DEST_DIR"; \
+fi && \
+git clone $REPO_URL "$DEST_DIR" && \
+cd "$DEST_DIR" && \
+chmod +x start.sh main.py import.sh && \
+./start.sh
+
+```
 
 # #2  Run this command on your PC containing the OVA - follow the prompts
 
