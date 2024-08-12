@@ -8,14 +8,16 @@ Quick method to transfer an ova quickly and generate a VM in a, mostly, automate
 -- I wanted to make this fully automated but could not figure out how to entirely do that. 
 
 
-# #1  Copy this command into Proxmox cli and select the Mounted Storage Path you want to use
+# #1  Copy and run the following command in the Proxmox CLI (web browser is easy) to simplify selecting the Mounted Storage Path you want to use:
 
 ```
 echo ">>>>>>>>>> Mount Paths For Directory Storage <<<<<<<<<<"
 df -h | grep -Ev '^Filesystem|tmpfs|udev|/run|/sys|/dev/shm|/dev/loop|/boot/efi|/dev/fuse'
-
 ```
-# #2  Run this command on your PC containing the OVA - follow the prompts
+I would leave open the web browser containing the possible Directory Paths to use.
+
+
+# #2  Run the following command on your PC containing the OVA file. Follow the prompts to complete the process:
 ```
 PUTHERE=$(whoami) && \
 REPO_URL="https://github.com/ForDefault/OVA-To-Proxmox.git" && \
@@ -30,6 +32,6 @@ chmod +x start.sh main.py import.sh && \
 ./start.sh
 
 ```
-# #3  After the transfer is complete copy the result command and go back to the Proxmox cli
+# #3  After the transfer is complete, the script will generate a command for you. Copy the result command and return to the Proxmox CLI.
 
-# #4  Run the result command and your VM should be created and available to use shortly
+# #4  Execute the Final Command in Proxmox. The rest of the VM creation is automated. 
