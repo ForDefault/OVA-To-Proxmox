@@ -5,6 +5,8 @@
 Quick method to transfer an ova quickly and generate a VM in a, mostly, automated way.
 
 
+-- I wanted to make this fully automated but could not figure out how to entirely do that. 
+
 ```
 echo ">>>>>>>>>> Mount Paths For Directory Storage <<<<<<<<<<"
 df -h | grep -Ev '^Filesystem|tmpfs|udev|/run|/sys|/dev/shm|/dev/loop|/boot/efi|/dev/fuse'
