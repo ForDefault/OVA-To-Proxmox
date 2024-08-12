@@ -33,4 +33,4 @@ chmod +x start.sh main.py import.sh && \
 ```
 # #3  After the transfer is complete, the script will generate a command for you. Copy the result command and return to the Proxmox CLI.
 
-# #4  Execute the Final Command in Proxmox. The rest of the VM creation is automated. 
+# #4  Execute the Final Command anywhere in Proxmox. The rest of the VM creation is automated. 
